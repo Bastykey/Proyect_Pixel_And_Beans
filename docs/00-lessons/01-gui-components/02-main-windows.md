@@ -214,7 +214,8 @@ try {
 
 ## ⚙️ Paso 4 – Crear la ventana principal (JFrame Maestro)
 
-La ventana principal será el "centro de operaciones" de nuestra aplicación, con un menú completo para navegar a todas las funcionalidades.
+La ventana principal será el "centro de operaciones" de nuestra aplicación, 
+con un menú completo para navegar a todas las funcionalidades.
 
 ### Pasos:
 
@@ -261,7 +262,8 @@ La ventana principal será el "centro de operaciones" de nuestra aplicación, co
 - Cambia el texto de cada ítem
 
 > 💡 **Notas importantes:**
-> - El asterisco (*) en "Usuarios*" indica que solo será accesible para el rol **ADMIN** (se implementará en Clase 5).
+> - El asterisco (*) en "Usuarios*" indica que solo será accesible para el rol **ADMIN** 
+(se implementará en Clase 5).
 > - El menú "Eventos → Torneos" es un **placeholder** que mostrará una pantalla informativa (Clase 2).
 > - "Top productos" quedará como trabajo autónomo (ver README para alcance completo).
 
