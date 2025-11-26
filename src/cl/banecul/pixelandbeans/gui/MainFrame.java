@@ -1,18 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package cl.banecul.pixelandbeans.gui;
 
-/**
- *
- * @author Bastian
- */
-public class MainFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form MainFrame
-     */
+
+public class MainFrame extends javax.swing.JFrame {
     public MainFrame() {
         initComponents();
     setTitle("Pixel & Bean - Sistema de Gestión");
@@ -69,7 +60,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jMenu8.add(jMenuItem7);
 
-        jMenuItem8.setText("Salir...");
+        jMenuItem8.setText("Salir. . .");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem8ActionPerformed(evt);
@@ -115,9 +106,19 @@ public class MainFrame extends javax.swing.JFrame {
         jMenu5.setText("Reportes");
 
         jMenuItem3.setText("Ventas del dia");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem3);
 
         jMenuItem4.setText("Productos top ");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem4);
 
         jMenuBar1.add(jMenu5);
@@ -125,6 +126,11 @@ public class MainFrame extends javax.swing.JFrame {
         jMenu6.setText("Eventos");
 
         jMenuItem5.setText("Torneos");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu6.add(jMenuItem5);
 
         jMenuBar1.add(jMenu6);
@@ -148,54 +154,94 @@ public class MainFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(91, 91, 91)
+                .addContainerGap(82, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addGap(77, 77, 77)
                 .addComponent(jLabel9))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
-                .addGap(0, 201, Short.MAX_VALUE))
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 203, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
+    javax.swing.JOptionPane.showMessageDialog( this,
+        "Esta es la pantalla de Productos",
+        "En desarrollo. . .",
+        javax.swing.JOptionPane.INFORMATION_MESSAGE
+    );
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jCheckBoxMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem1ActionPerformed
-        // TODO add your handling code here:
+    javax.swing.JOptionPane.showMessageDialog( this,
+        "Esta es la pantalla de Ventas.",
+        "En desarrollo. . .",
+        javax.swing.JOptionPane.INFORMATION_MESSAGE
+    );
+
     }//GEN-LAST:event_jCheckBoxMenuItem1ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
+    UserFrame userFrame = new UserFrame();
+    userFrame.setLocationRelativeTo(this); 
+    userFrame.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        LoginView login = new LoginView();
-        login.setLocationRelativeTo(null); // por si no se centra solo
-        login.setVisible(true);
-        this.dispose(); 
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
-
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        System.exit(0);
+    int respuesta = javax.swing.JOptionPane.showConfirmDialog(
+        this,
+        "¿Estás seguro de que deseas cerrar sesión?",
+        "Confirmar",
+        javax.swing.JOptionPane.YES_NO_OPTION
+    );
+    
+    if (respuesta == javax.swing.JOptionPane.YES_OPTION) {
+        this.dispose();      
+        new LoginView().setVisible(true);
+    }
+
+
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
          javax.swing.JOptionPane.showMessageDialog(this,
         "Pixel and Beans \n Sistema de gestión de cafetería.\n ~ Bastykey",
         "Acerca de...",
-        javax.swing.JOptionPane.INFORMATION_MESSAGE
-    );  
+        javax.swing.JOptionPane.INFORMATION_MESSAGE );  
          
     }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+       System.exit(0); 
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    javax.swing.JOptionPane.showMessageDialog( this,
+        "Esta es la pantalla de Productos top.",
+        "En desarrollo. . .",
+        javax.swing.JOptionPane.INFORMATION_MESSAGE );
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    javax.swing.JOptionPane.showMessageDialog( this,
+        "Esta es la pantalla de Reportes de ventas del dia",
+        "En desarrollo. . .",
+        javax.swing.JOptionPane.INFORMATION_MESSAGE );
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    javax.swing.JOptionPane.showMessageDialog( this,
+        "Esta es la pantalla de.",
+        "En desarrollo. . .",
+        javax.swing.JOptionPane.INFORMATION_MESSAGE );
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     /**
      * @param args the command line arguments
