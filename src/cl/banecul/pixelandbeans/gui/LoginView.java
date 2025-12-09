@@ -125,16 +125,18 @@ public class LoginView extends javax.swing.JFrame {
                 this,
                 "Inicio de sesión correcto",
                 "Bienvenido",
-                javax.swing.JOptionPane.INFORMATION_MESSAGE
-        );
-
+                javax.swing.JOptionPane.INFORMATION_MESSAGE );
+    MainFrame mainFrame = new MainFrame();
+    mainFrame.setLocationRelativeTo(this); 
+    mainFrame.setVisible(true);
+    this.dispose();
+    
     } else {
         javax.swing.JOptionPane.showMessageDialog(
                 this,
                 "Usuario o contraseña incorrectos",
                 "Error",
-                javax.swing.JOptionPane.ERROR_MESSAGE
-        );
+                javax.swing.JOptionPane.ERROR_MESSAGE );
     }
 } 
     
